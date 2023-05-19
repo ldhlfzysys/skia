@@ -10,6 +10,9 @@ is_skia_standalone = true
 declare_args() {
   is_official_build = false
   is_component_build = false
+# cube modify start
+  is_cube_build = false
+# cube modify end
   ndk = ""
 
   # Android 5.0, Lollipop

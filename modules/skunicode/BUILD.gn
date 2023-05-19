@@ -14,7 +14,10 @@ if (skia_use_icu) {
   config("public_config") {
     include_dirs = [ "include" ]
     defines = [ "SK_UNICODE_AVAILABLE" ]
-    if (is_component_build) {
+# cube modify start
+    if (is_component_build || is_cube_build) {
+    # if (is_component_build) {
+# cube modify end
       defines += [ "SKUNICODE_DLL" ]
     }
   }

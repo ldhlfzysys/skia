@@ -30,7 +30,10 @@ config("skia_public") {
 
   defines = []
   cflags_objcc = []
-  if (is_component_build) {
+# cube modify start
+  if (is_component_build || is_cube_build) {
+  # if (is_component_build) {
+# cube modify end
     defines += [ "SKIA_DLL" ]
   }
   if (is_fuchsia || is_linux) {
